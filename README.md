@@ -12,11 +12,13 @@ Turn 21xx/11xx/41xx/47xx into CDC mode: plug the device to USB port, if the LED 
 
 **To try it out**:
 
-Use WinSCP to send the sample script (2108_beaglebone.py) to a folder in BeagleBone
+Use WinSCP to send 2108_beaglebone.py to a folder in BeagleBone
 
-To run it, use Python3 2108_beaglebone.py
+To run it, use **Python3 2108_beaglebone.py**
 
 **Note**:
 
 If you see error message complaining “failed "import serial module" or "seial doesn't have the attribue of serial", You may need to run "pip3 unstall serial" and "pip3 unstall serial" then reinstall pyserial to make sure pyserial is the ONLY to serial module installed on BeagleBone.
+
+BeagleBone may have earlier version Python installed, so make sure you use Python3 instead of Python to start the program
 
