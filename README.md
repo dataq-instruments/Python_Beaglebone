@@ -18,5 +18,5 @@ To run it, use Python3 2108_beaglebone.py
 
 **Note**:
 
-If you see error message complaining failed to "import serial module" or "seial doesn't have the attribue of serial", You may need to run run "pip3 unstall serial" and "pip3 unstall serial" then reinstall pyserial to make sure pyserial is the ONLY to serial module installed on BeagleBone.
+If you see error message complaining “failed "import serial module" or "seial doesn't have the attribue of serial", You may need to run "pip3 unstall serial" and "pip3 unstall serial" then reinstall pyserial to make sure pyserial is the ONLY to serial module installed on BeagleBone.
 
