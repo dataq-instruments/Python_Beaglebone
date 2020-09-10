@@ -10,9 +10,10 @@ CONST_SER_PORT = '/dev/ttyACM0'
 serDataq = serial.Serial(CONST_SER_PORT)
 serDataq.set_buffer_size=60000
 
-# the default ASCII string format in Python is not the 8-bit ASCII, which our devices use, 
-# so one need to tell Python to construct ASCII in 8-bit format by inserting b in front 
+# we need to force Python to construct 8-bit ASCII string by inserting b in front 
 # of the string, such as b"stop\r" instead of "stop/r"
+
+# also, to use readline, Python looks for CR/LF, so we need to use "eol 1" command 
 
 serDataq.write(b"stop\r")        #stop in case device was left scanning
 serDataq.write(b"eol 1\r") 
