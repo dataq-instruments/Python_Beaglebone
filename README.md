@@ -24,9 +24,11 @@ If you see error message complaining “failed "import serial module" or "seial 
 
 BeagleBone may have earlier version Python installed, so make sure you use **python3** instead of **python** to start the program
 
-Watch out, the default ASCII string format in Python is not the 8-bit ASCII in good old days, which DI-21xx/11xx/41xx/47xx uses, so one need to tell Python to construct ASCII in 8-bit format by inserting b in front of the string, such as b"stop\r" instead of "stop/r"
+We need to force Python to construct 8-bit ASCII string by inserting b in front of the string, such as b"stop\r" instead of "stop/r"
 
-b"encode" determines the output format, where
+Since we use readline, Python looks for CR/LF, so we need to use "eol 1" command 
+
+"encode" determines the output format, where
 0 outputs raw ADC reading in two-byte binary format
 3 outputs raw ADC reading in ASCII format
 1 & 2 outputs voltage instead of raw ADC reading shown in the protocol
