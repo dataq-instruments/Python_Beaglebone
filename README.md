@@ -26,3 +26,10 @@ BeagleBone may have earlier version Python installed, so make sure you use **pyt
 
 Watch out, the default ASCII string format in Python is not the 8-bit ASCII in good old days, which DI-21xx/11xx/41xx/47xx uses, so one need to tell Python to construct ASCII in 8-bit format by inserting b in front of the string, such as b"stop\r" instead of "stop/r"
 
+b"encode" determines the output format, where
+0 outputs raw ADC reading in two-byte binary format
+3 outputs raw ADC reading in ASCII format
+1 & 2 outputs voltage instead of raw ADC reading shown in the protocol
+
+0 results in highest performance, and 1 & 2 the lowest, with 3 in between
+
