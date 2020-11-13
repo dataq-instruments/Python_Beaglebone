@@ -35,5 +35,5 @@ Since we use readline, Python looks for CR/LF, so we need to use "eol 1" command
 
 0 results in highest performance, and 1 & 2 the lowest, with 3 in between
 
-/dev/ttyACM0 or /dev/ttyACM1? read more in https://arstechnica.com/civis/viewtopic.php?f=16&t=1403645
+/dev/ttyACM0 or /dev/ttyACM1? read more in https://arstechnica.com/civis/viewtopic.php?f=16&t=1403645 and https://gist.github.com/edro15/1c6cd63894836ed982a7d88bef26e4af
 
